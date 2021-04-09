@@ -1,0 +1,48 @@
+body{
+    background: #fffffa;
+}
+
+header{
+    width: 1250px;
+    height: 500px;
+    overflow:hidden;
+    background:#7e7e7e;
+    margin-bottom:20px;
+
+}
+.wrapper{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    overflow:hidden;
+}
+
+div header nav{
+    float:right;
+    line-height: 200px;
+    background:indigo;
+}
+header nav a {
+    display:inline-block;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 20px;
+    line-height:normal;
+    font-size:20px;
+    font-weight:bold;
+    -webkit-transition:all 500ms ease ;
+    -o-transition:all 500ms ease; 
+    transition:all 500ms ease ;
+
+}
+header nav a:hover{
+    background:#380d52;
+    border-radius:50px;
+
+}
+
+div h1{
+    font-size: 100px;
+    color:rgba(199, 199, 199, 0.753);
+    float: left;
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Helvetica;
+      margin: 0;
+    }
+    a {
+      font-size: 25px;
+      font-family: Helvetica;
+     }
+
+    h2 {
+      font-weight: 400;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 40px;
+      color:rgb(0, 95, 102)
+    }
+
+    .linea {
+      background: rgb(0, 95, 102);
+      height: 5px;
+      width: 100%;
+      display: block;
+
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      width: 95%;
+      margin: auto;
+      grid-gap: 10px;
+      padding: 40px 0;
+      overflow: hidden;
+      box-shadow: 0 0 6px black;
+    }
+
+    .galeria img {
+      width: 100%;
+      vertical-align: top;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .galeria a:hover img {
+      filter: blur(2px);
+      transform: rotate(10deg) scale(1.3);
+
+    }
+
+    .light-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgb(0, 0, 0, .5);
+      transition: transform .3s ease-in-out;
+      width: 100%;
+      height: 100vh;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0);
+
+    }
+
+    .light-box img {
+      width: 75vw;
+      max-height: 70vh;
+
+    }
+
+    .light-box:target {
+      transform: scale (1);
+    }
+
+    .close {
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 40;
+      background: rgb(0, 79, 104);
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%
+    }
+
+    .next {
+      display: block;
+      background: rgb(0, 95, 133);
+      color: white;
+      height: 30px;
+      width: 30px;
+      line-height: 30px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    /* Header/logo Title */
+    .header {
+      padding: 80px;
+      text-align: center;
+      background: #666666;
+      color: #ffffff;
+      opacity: 0.8;
+      background-image: url(cam.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      /* (../Images/pp.JPG) */
+    }
+
+    .header h1 {
+      font-size: 100px;
+    }
+
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+
+
+    .navbar a.right {
+      float: right;
+    }
+
+
+    .navbar a:hover {
+      background-color: rgb(200, 200, 200);
+      color: black;
+    }
+
+
+
+    /* Footer */
+    .footer {
+    padding: 10px;
+    text-align: center;
+    background: #ddd;
+    width: 100%; 
+
+  }
+  .footer img {
+    width: 50px;
+    padding:10px;
+    }
+
+    @media screen and (max-width: 400px) {
+    .galeria {
+      grid-template-columns: repeat(auto-fit,minmax(200px, 1fr))
+    
+    } 
+
+    .close{
+      top:20px;
+      right:20px;
+    }
+    .navbar a {
+        float: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Galería Fotográfica </h1>
+  </div>
+
+  <div class="navbar">
+    <a href="Portafolio.html"> Inicio</a>
+    <a href="Acercademi.html"> Acerca de mi </a>
+    <a href="Videos.html"> Videos </a>
+    <a href="CV.html" class="right"> CV</a>
+  </div>
+  <div> 
+  <h2> Fotografía de eventos </h2>
+  <span class="linea"> </span>
+  <section class="galeria"> 
+    <a href="#image1"> <img src="Img Selección de fotos para Portafolio/Fotografía de eventos/1.jpg" height="300px"
+        width="450px"> </a>
+    <a href="#image2"><img src="Img Selección de fotos para Portafolio/Fotografía de eventos/2.jpg" height="300px"
+        width="450px"> </a>
+    <a href="#image3"><img src="Img Selección de fotos para Portafolio/Fotografía de eventos/10.jpg" height="300px"
+        width="450px"> </a>
+    <a href="#image4"><img src="Img Selección de fotos para Portafolio/Fotografía de eventos/4.jpg" height="300px"
+        width="450px"></a>
+    <a href="#image5"> <img src="Img Selección de fotos para Portafolio/Fotografía de eventos/5.jpg" height="300px"
+        width="450px"></a>
+    <a href="#image6"><img src="Img Selección de fotos para Portafolio/Fotografía de eventos/6.jpg" height="300px"
+        width="400px"></a>
+    <a href="#image7"><img src="Img Selección de fotos para Portafolio/Fotografía de eventos/7.jpg" height="300px"
+        width="400px"></a>
+    <a href="#image8"><img src="Img Selección de fotos para Portafolio/Fotografía de eventos/8.jpg" height="300px"
+        width="400px"></a>
+    <a href="#image9"><img src="Img Selección de fotos para Portafolio/Fotografía de eventos/9.JPG" height="300px"
+        width="450px"> </a>
+    </div>
+  
+
+
+  <h2> Arte Urbano </h2>
+  
+  <div>
+    <span class="linea"> </span>
+    <section class="galeria">
+      <a href="#image1"><img src="Img Selección de fotos para Portafolio/graffitis/1.1.JPG" height="600px" width="400px"> </a>
+      <a href="#image2"><img src="Img Selección de fotos para Portafolio/graffitis/1.2.JPG" height="400px" width="600px"></a>
+      <a href="#image3"><img src="Img Selección de fotos para Portafolio/graffitis/1.3.JPG" height="400px" width="320px"></a>
+      <a href="#image4"><img src="Img Selección de fotos para Portafolio/graffitis/1.4.JPG" height="600px" width="400px"></a>
+      <a href="#image5"><img src="Img Selección de fotos para Portafolio/graffitis/1.5.JPG" height="400px" width="350px"></a>
+      <a href="#image6"><img src="Img Selección de fotos para Portafolio/graffitis/1.6.JPG" height="600px" width="300px"></a>
+      <a href="#image7"><img src="Img Selección de fotos para Portafolio/graffitis/1.7.JPG" height="600px" width="450px"></a>
+      <a href="#image8"><img src="Img Selección de fotos para Portafolio/graffitis/1.8.jpg" height="600px" width="450px"></a>
+      <a href="#image9"><img src="Img Selección de fotos para Portafolio/graffitis/1.9.JPG" height="500px" width="600px"></a>
+      <a href="#image10"> <img src="Img Selección de fotos para Portafolio/graffitis/1.10.JPG" height="600px" width="450px"> </a>   
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/graffitis/1.11.JPG" height="300px" width="450px"> </a>
+  </section>                  
+</div>
+
+  <h2> Fotoperiodismo</h2>
+  <div>
+    <span class="linea"> </span>
+    <section class="galeria">
+      <a href="#image1"><img src="Img Selección de fotos para Portafolio/Marcha/5.1.jpg" height="350px" width="450px"> </a>
+      <a href="#image2"><img src="Img Selección de fotos para Portafolio/Marcha/5.2.jpg" height="350px" width="450px"></a>
+      <a href="#image3"><img src="Img Selección de fotos para Portafolio/Marcha/5.3.jpg" height="350px" width="450px"></a>
+      <a href="#image4"><img src="Img Selección de fotos para Portafolio/Marcha/5.4.jpg" height="350px" width="450px"></a>
+    </section> 
+  </div>
+ 
+  <h2> Paisajes </h2>
+  <div>
+    <span class="linea"> </span>
+    <section class="galeria">
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Paisajes/4.1.JPG" height="350px" width="550px"> </a>
+  <a href="#image2"><img src="Img Selección de fotos para Portafolio/Paisajes/4.2.JPG" height="350px" width="550px"></a>
+  <a href="#image3"><img src="Img Selección de fotos para Portafolio/Paisajes/4.3.JPG" height="350px" width="550px"></a>
+  <a href="#image4"><img src="Img Selección de fotos para Portafolio/Paisajes/4.4.JPG" height="350px" width="550px"></a>
+  <a href="#image5"><img src="Img Selección de fotos para Portafolio/Paisajes/4.5.jpg" height="200px" width="800px"></a>
+  <a href="#image6"><img src="Img Selección de fotos para Portafolio/Paisajes/4.6.jpg" height="350px" width="550px"></a>
+  <a href="#image7"><img src="Img Selección de fotos para Portafolio/Paisajes/4.7.jpg" height="200px" width="900px"></a>
+  <a href="#image8"><img src="Img Selección de fotos para Portafolio/Paisajes/4.8.JPG" height="350px" width="550px"></a>
+  <a href="#image9"><img src="Img Selección de fotos para Portafolio/Paisajes/4.9.JPG" height="350px" width="550px"></a>
+  <a href="#image10"><img src="Img Selección de fotos para Portafolio/Paisajes/4.10.JPG" height="400px" width="600px"></a>
+  <a href="#image11"><img src="Img Selección de fotos para Portafolio/Paisajes/4.11.JPG" height="600px" width="400px"></a>
+</section>   
+</div>
+
+ <h2> Retrato</h2>
+  <div>
+    <span class="linea"> </span>
+    <section class="galeria">
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.1.jpg" height="450px" width="350px"> </a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.2.jpg" height="400px" width="600px"> </a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.3.jpg" height="400px" width="600px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.4.JPG" height="600px" width="400px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.5.JPG" height="400px" width="600px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.6.JPG" height="400px" width="600px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.7.JPG" height="400px" width="600px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.8.JPG" height="400px" width="600px"></a>
+ <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.9.JPG" height="400px" width="600px"></a>
+ <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.10.JPG" height="600px" width="400px"></a>
+ <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.11.JPG" height="600px" width="400px"></a>
+ <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.12.JPG" height="600px" width="400px"></a>
+ <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.13.jpg" height="400px" width="600px"></a>
+ <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.14.JPG" height="400px" width="600px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.15.JPG" height="550px" width="400px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.17.JPG" height="400px" width="600px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.18.JPG" height="400px" width="600px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.19.JPG" height="400px" width="600px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.20.JPG" height="600px" width="350px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.21.jpg" height="600px" width="500px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.22.JPG" height="400px" width="600px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.23.JPG" height="400px" width="600px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.24.JPG" height="400px" width="600px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.25.JPG" height="500px" width="600px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.26.JPG" height="600px" width="500px"></a>
+  <a href="#image1">  <img src="Img Selección de fotos para Portafolio/Retratos/3.27.JPG" height="400px" width="600px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.29.jpg" height="600px" width="400px"></a>
+  <a href="#image1"><img src="Img Selección de fotos para Portafolio/Retratos/3.30.jpg" height="600px" width="400px"></a>
+
+  </section> 
+  </div>
+  <script src="https://kit.fontawesome.com/98e155725a.js" crossorigin="anonymous"></script>
+  <div class="footer">
+    <nav>
+      <ul>
+        <a target="_parent"target="_blank" href="https://www.instagram.com/jocelynlealruiz/"><img src="Img gráfico/logo instagram.png"></a>
+        <a target="_self"target="_blank"  href="https://www.youtube.com/channel/UCmqpbMA2SEr_0AXQqXjOTrg"> <img src="Img gráfico/youtube-logo-png-46031.png"></a>
+        <a class="active" target="_blank" href="https://www.linkedin.com/in/jocelyn-leal-ruiz"> <img src="Img gráfico/logo linkedin.png"></a>
+      </ul>
+  </div>
+</body>
+
+</html>
