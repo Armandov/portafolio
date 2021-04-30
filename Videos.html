@@ -90,22 +90,25 @@
 
   }
   .footer img {
-    width: 5%;
-    padding:10px
+    width: 50px;
+    padding:10px;
     }
-  
-  img:hover {
-    animation: shake 0.3s;
-    animation-iteration-count: infinite;
-    
-  }
 
-  @media screen and (max-width: 400px) {
-    .navbar a {
-      float: none;
-      width: 100%;
+    @media screen and (max-width: 400px) {
+    .galeria {
+      grid-template-columns: repeat(auto-fit,minmax(200px, 1fr))
+    
+    } 
+
+    .close{
+      top:20px;
+      right:20px;
     }
-  }
+    .navbar a {
+        float: none;
+        width: 100%;
+      }
+    }
 </style> 
 
   <div class="header">
