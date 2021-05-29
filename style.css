@@ -47,3 +47,32 @@ div h1{
     color:#0b2f4d;
     text-align: center;
 }
+@media screen and (max-width: 400px)
+    {
+      .header {
+        float:none;
+        width:100%;
+      }
+    }
+  @media screen and (max-width: 400px)
+  {
+  .contenedor {
+    float: none;
+      width: 100%;
+  }
+  }
+  
+  @media screen and (max-width:400px){
+    .footer{
+      float: none;
+      width: 100%;
+    }
+  }
+
+
+    @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
