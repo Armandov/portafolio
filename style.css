@@ -8,20 +8,7 @@ header{
     width: 100%;
     height: 100%;
     overflow:hidden;
-    background-image: url(..//Index/portafolio.jpg);
-    margin-bottom:10px;
-    text-align: right;
-}
-.wrapper{
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-    overflow:hidden;
-}
-
-div header nav{
-    float:right;
-    line-height: 200px;
+    background-image: url(..//Index/portaf 
     background:rgb(129, 0, 118);
 }
 header nav a {
